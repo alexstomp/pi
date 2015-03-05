@@ -16,7 +16,7 @@
     display: $display
     list-style: none
 
-@mixin roundedCorners($radius: 5px)
+@mixin roundedCorners($radius: 3px)
     border-radius: $radius
     -moz-border-radius: $radius
     -webkit-border-radius: $radius
@@ -63,6 +63,11 @@
     -ms-transition-timing-function: ease-in-out
     -moz-transition-timing-function: ease-in-out
     -webkit-transition-timing-function: ease-in-out
+
+@mixin transform($transform)
+    transform: $transform
+    -moz-transform: $transform
+    -webkit-transform: $transform
 
 @mixin backgroundSize($tuplePercent)
     background-size: $tuplePercent

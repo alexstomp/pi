@@ -1,26 +1,119 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, a, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-  padding: 0;
-  margin: 0;
   border: 0;
+  font-size: 62.5%;
+  list-style: none outside none;
+  margin: 0;
   outline: 0;
-  vertical-align: baseline;
-  list-style: none outside none; }
+  padding: 0;
+  vertical-align: baseline; }
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+body {
+  position: relative;
+  width: 100%; }
+
+.center {
+  margin: 0 auto;
+  height: 100%;
+  width: 960px; }
+
 li, a, p, h1, h2, h3, h4, h5, h6, label, input, th, td {
   list-style: none outside none;
   text-decoration: none;
   font-family: "Source Sans Pro", Georgia, serif;
-  font-size: 11pt;
-  line-height: 1.5em;
-  letter-spacing: 0.03em; }
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  font-weight: 400;
+  letter-spacing: 0.03rem; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Source Sans Pro"; }
+  font-family: "Source Sans Pro";
+  font-weight: 300; }
+
+.accent-text {
+  color: #BEAAF5;
+  font-size: inherit;
+  font-weight: inherit; }
+
+.button {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background: #BEAAF5;
+  border-bottom: 2px solid #9b7cf0;
+  color: #6F65A6;
+  font-size: 1.7rem;
+  font-weight: 400;
+  padding: 7px 15px;
+  text-transform: uppercase; }
+  .button:hover {
+    background: #9b7cf0;
+    color: #584f89;
+    cursor: pointer; }
+
+.landing-block {
+  display: block; }
+
+.top {
+  background: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  height: 100%; }
+  .top .head {
+    padding: 25px;
+    position: relative; }
+    .top .head .logo img {
+      height: 31px; }
+    .top .head .nav {
+      position: absolute;
+      right: 25px;
+      top: 32px; }
+  .top .welcome {
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    padding: 0 25px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: inherit; }
+    .top .welcome .welcome-header {
+      text-shadow: 0 0 10px black;
+      -moz-text-shadow: 0 0 10px black;
+      -webkit-text-shadow: 0 0 10px black;
+      color: white;
+      font-size: 5rem;
+      line-height: 6rem;
+      margin-bottom: 30px; }
+    .top .welcome .welcome-invite .invite-request {
+      border-radius: 3px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      background-clip: padding-box;
+      -moz-background-clip: padding-box;
+      -webkit-background-clip: padding-box;
+      border: 1px solid #6F65A6;
+      font-size: 1.75rem;
+      line-height: 40px;
+      margin-right: 20px;
+      padding: 0 10px;
+      height: 40px;
+      width: calc(70% - 111px); }
+    .top .welcome .welcome-invite .invite-submit {
+      font-size: 1.75rem;
+      width: 90px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,44 @@
+.landing-block
+    display: block
+
+.top
+    background: url("../img/bg.jpg")
+    background-size: cover
+    background-position: center bottom
+    height: 100%
+    .head
+        padding: 25px
+        position: relative
+        .logo
+            img
+                height: 31px
+        .nav
+            position: absolute
+            right: 25px
+            top: 32px
+    .welcome
+        +transform(translateY(-50%))
+        padding: 0 25px
+        position: absolute
+        text-align: center
+        top: 50%
+        width: inherit
+        .welcome-header
+            +text-shadow(0 0 10px black)
+            color: white
+            font-size: 5rem
+            line-height: 6rem
+            margin-bottom: 30px
+        .welcome-invite
+            .invite-request
+                +roundedCorners()
+                border: 1px solid $dark_purple
+                font-size: 1.75rem
+                line-height: 40px
+                margin-right: 20px
+                padding: 0 10px
+                height: 40px
+                width: calc(70% - 111px)
+            .invite-submit
+                font-size: 1.75rem
+                width: 90px

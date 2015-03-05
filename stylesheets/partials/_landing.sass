@@ -1,21 +1,29 @@
-.landing-block
-    display: block
+.page-landing, .page-signup, .page-login
+    +backgroundSize(cover)
+    background: url("../img/bg.jpg")
+    background-position: center
+    background-attachment: fixed
+
+// HEAD
+
+.head
+    padding: 50px 25px
+    position: relative
+    .logo
+        img
+            height: 31px
+    .nav
+        position: absolute
+        right: 25px
+        top: 45px
+        li
+            float: left
+            margin-left: 15px
+
+// HOME
 
 .top
-    background: url("../img/bg.jpg")
-    background-size: cover
-    background-position: center bottom
     height: 100%
-    .head
-        padding: 50px 25px
-        position: relative
-        .logo
-            img
-                height: 31px
-        .nav
-            position: absolute
-            right: 25px
-            top: 57px
     .welcome
         +transform(translateY(-50%))
         padding: 0 25px
@@ -24,6 +32,9 @@
         top: 50%
         width: 100%
         max-width: 960px
+        @media screen and (max-height: 750px)
+            +transform(none)
+            top: 250px
         .welcome-header
             +text-shadow(0 0 10px black)
             color: white
@@ -40,10 +51,10 @@
                 padding: 0 10px
                 height: 40px
                 max-width: 620px
-                width: calc(100% - 120px)
+                width: calc(100% - 160px)
             .invite-submit
                 font-size: 1.8rem
-                width: 90px
+                width: 150px
         .welcome-slogan
             +text-shadow(0 0 10px black)
             color: white
@@ -51,3 +62,47 @@
             margin: 30px auto 0
             line-height: 4rem
             max-width: 650px
+
+// SIGNUP
+
+.signup-block, .login-block
+    +transform(translateY(-50%))
+    position: absolute
+    top: 50%
+    max-width: 960px
+    padding: 25px
+    text-align: center
+    width: 100%
+    @media screen and (max-height: 750px)
+        +transform(none)
+        top: 150px
+    .signup-intro, .login-intro
+        +text-shadow(0 0 10px black)
+        color: white
+        font-size: 5rem
+        line-height: 5rem
+        margin-bottom: 50px
+    .signup, .login
+        +roundedCorners()
+        +shadow(0 0 10px 0 #242424)
+        background: white
+        margin: 0 auto
+        max-width: 500px
+        padding: 20px
+        text-align: left
+        width: 100%
+        .signup-email, .signup-pass, .signup-conf, .login-email, .login-pass
+            +roundedCorners()
+            border: 1px solid #d7d7d9
+            font-size: 1.75rem
+            line-height: 40px
+            padding: 0 10px
+            margin-bottom: 15px
+            width: 100%
+    .signup-outro, .login-outro
+        +text-shadow(0 0 10px black)
+        color: white
+        font-size: 2.5rem
+        margin: 30px auto 0
+        line-height: 4rem
+        max-width: 500px

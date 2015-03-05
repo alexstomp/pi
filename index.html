@@ -4,51 +4,45 @@
 
     <title>Pi App</title>
 
-    <!-- JQUERY -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
-
-    <!-- BBONE + UNDERSCORE -->
-    <script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
-
     <link rel="stylesheet" href="./stylesheets/main.css"/>
+    <link rel="icon" type="image/png" href="./img/pi_icon.png">
   
   </head>
   
   <body>
 
     <!-- PAGE :: LANDING -->
-
-    <section class="landing-block top">
-      <div class="center">
-        <div class="head">
-          <a href="index.html" class="logo">
-            <img src="./img/pi_slant.png"/>
-          </a>
-          <ul class="nav">
-            <li class="sign-up">
-              <a href="#" class="button">Sign Up</a>
-            </li>
-          </ul>
-        </div>
-        <div class="welcome">
-          <h2 class="welcome-header">
-            Request Access to <span class="accent-text">Pi App</span>
-          </h2>
-          <div class="welcome-invite">
-            <input class="invite-request" placeholder="john@doe.com"/>
-            <a class="invite-submit button">submit</a>
+    <section class="page-landing">
+      <div class="landing-block top">
+        <div class="center">
+          <div class="head">
+            <a href="index.html" class="logo">
+              <img src="./img/pi_slant.png"/>
+            </a>
+            <ul class="nav">
+              <li class="sign-up">
+                <a href="./signup.html" class="button accent">Sign Up</a>
+              </li>
+              <li class="sign-in">
+                <a href="./login.html" class="button">Already have an account?</a>
+              </li>
+            </ul>
           </div>
-          <h3 class="welcome-slogan">
-            <span class="accent-text">Pi App</span> brings the power of social media to your classroom by enabling a whole new level of collaboration.
-          </h3>
+          <div class="welcome">
+            <h2 class="welcome-header">
+              Sign up for an invite to <span class="accent-text">Pi App</span>
+            </h2>
+            <div class="welcome-invite">
+              <input class="invite-request" placeholder="john@doe.com"/>
+              <a class="invite-submit button accent">Request Invite</a>
+            </div>
+            <h3 class="welcome-slogan">
+              <span class="accent-text">Pi App</span> brings the power of social media to your classroom by enabling a whole new level of collaboration.
+            </h3>
+          </div>
         </div>
       </div>
     </section>
-
     <!-- END_PAGE :: LANDING -->
 
   </body>

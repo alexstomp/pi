@@ -18,12 +18,15 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   display: table;
   clear: both; }
 
+html {
+  height: 100%; }
+
 body {
   position: relative;
-  width: 100%; }
+  min-height: 100%; }
 
 .center {
-  height: 100%;
+  min-height: 100%;
   margin: 0 auto;
   max-width: 960px;
   width: 100%; }
@@ -53,35 +56,50 @@ h1, h2, h3, h4, h5, h6 {
   background-clip: padding-box;
   -moz-background-clip: padding-box;
   -webkit-background-clip: padding-box;
-  background: #BEAAF5;
-  border-bottom: 2px solid #9b7cf0;
-  color: #6F65A6;
-  font-size: 1.7rem;
+  border: 2px solid #EDEDFD;
+  color: #EDEDFD;
+  display: inline-block;
+  font-size: 1.65rem;
   font-weight: 400;
-  padding: 7px 15px;
-  text-transform: uppercase; }
+  padding: 10px 15px 11px;
+  text-transform: capitalize;
+  width: auto; }
   .button:hover {
-    background: #9b7cf0;
-    color: #584f89;
-    cursor: pointer; }
+    cursor: pointer;
+    background: #EDEDFD;
+    color: #584f89; }
+  .button.accent {
+    background: #BEAAF5;
+    border-color: transparent;
+    border-bottom-color: #9b7cf0;
+    color: #6F65A6; }
+    .button.accent:hover {
+      background: #9b7cf0;
+      color: #584f89; }
 
-.landing-block {
-  display: block; }
+.page-landing, .page-signup, .page-login {
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background: url("../img/bg.jpg");
+  background-position: center;
+  background-attachment: fixed; }
+
+.head {
+  padding: 50px 25px;
+  position: relative; }
+  .head .logo img {
+    height: 31px; }
+  .head .nav {
+    position: absolute;
+    right: 25px;
+    top: 45px; }
+    .head .nav li {
+      float: left;
+      margin-left: 15px; }
 
 .top {
-  background: url("../img/bg.jpg");
-  background-size: cover;
-  background-position: center bottom;
   height: 100%; }
-  .top .head {
-    padding: 50px 25px;
-    position: relative; }
-    .top .head .logo img {
-      height: 31px; }
-    .top .head .nav {
-      position: absolute;
-      right: 25px;
-      top: 57px; }
   .top .welcome {
     transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -92,6 +110,12 @@ h1, h2, h3, h4, h5, h6 {
     top: 50%;
     width: 100%;
     max-width: 960px; }
+    @media screen and (max-height: 750px) {
+      .top .welcome {
+        transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+        top: 250px; } }
     .top .welcome .welcome-header {
       text-shadow: 0 0 10px black;
       -moz-text-shadow: 0 0 10px black;
@@ -114,10 +138,10 @@ h1, h2, h3, h4, h5, h6 {
       padding: 0 10px;
       height: 40px;
       max-width: 620px;
-      width: calc(100% - 120px); }
+      width: calc(100% - 160px); }
     .top .welcome .welcome-invite .invite-submit {
       font-size: 1.8rem;
-      width: 90px; }
+      width: 150px; }
     .top .welcome .welcome-slogan {
       text-shadow: 0 0 10px black;
       -moz-text-shadow: 0 0 10px black;
@@ -127,5 +151,68 @@ h1, h2, h3, h4, h5, h6 {
       margin: 30px auto 0;
       line-height: 4rem;
       max-width: 650px; }
+
+.signup-block, .login-block {
+  transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  max-width: 960px;
+  padding: 25px;
+  text-align: center;
+  width: 100%; }
+  @media screen and (max-height: 750px) {
+    .signup-block, .login-block {
+      transform: none;
+      -moz-transform: none;
+      -webkit-transform: none;
+      top: 150px; } }
+  .signup-block .signup-intro, .signup-block .login-intro, .login-block .signup-intro, .login-block .login-intro {
+    text-shadow: 0 0 10px black;
+    -moz-text-shadow: 0 0 10px black;
+    -webkit-text-shadow: 0 0 10px black;
+    color: white;
+    font-size: 5rem;
+    line-height: 5rem;
+    margin-bottom: 50px; }
+  .signup-block .signup, .signup-block .login, .login-block .signup, .login-block .login {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    box-shadow: 0 0 10px 0 #242424;
+    -moz-box-shadow: 0 0 10px 0 #242424;
+    -webkit-box-shadow: 0 0 10px 0 #242424;
+    background: white;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 20px;
+    text-align: left;
+    width: 100%; }
+    .signup-block .signup .signup-email, .signup-block .signup .signup-pass, .signup-block .signup .signup-conf, .signup-block .signup .login-email, .signup-block .signup .login-pass, .signup-block .login .signup-email, .signup-block .login .signup-pass, .signup-block .login .signup-conf, .signup-block .login .login-email, .signup-block .login .login-pass, .login-block .signup .signup-email, .login-block .signup .signup-pass, .login-block .signup .signup-conf, .login-block .signup .login-email, .login-block .signup .login-pass, .login-block .login .signup-email, .login-block .login .signup-pass, .login-block .login .signup-conf, .login-block .login .login-email, .login-block .login .login-pass {
+      border-radius: 3px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      background-clip: padding-box;
+      -moz-background-clip: padding-box;
+      -webkit-background-clip: padding-box;
+      border: 1px solid #d7d7d9;
+      font-size: 1.75rem;
+      line-height: 40px;
+      padding: 0 10px;
+      margin-bottom: 15px;
+      width: 100%; }
+  .signup-block .signup-outro, .signup-block .login-outro, .login-block .signup-outro, .login-block .login-outro {
+    text-shadow: 0 0 10px black;
+    -moz-text-shadow: 0 0 10px black;
+    -webkit-text-shadow: 0 0 10px black;
+    color: white;
+    font-size: 2.5rem;
+    margin: 30px auto 0;
+    line-height: 4rem;
+    max-width: 500px; }
 
 /*# sourceMappingURL=main.css.map */

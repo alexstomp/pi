@@ -23,9 +23,10 @@ body {
   width: 100%; }
 
 .center {
-  margin: 0 auto;
   height: 100%;
-  width: 960px; }
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%; }
 
 li, a, p, h1, h2, h3, h4, h5, h6, label, input, th, td {
   list-style: none outside none;
@@ -73,14 +74,14 @@ h1, h2, h3, h4, h5, h6 {
   background-position: center bottom;
   height: 100%; }
   .top .head {
-    padding: 25px;
+    padding: 50px 25px;
     position: relative; }
     .top .head .logo img {
       height: 31px; }
     .top .head .nav {
       position: absolute;
       right: 25px;
-      top: 32px; }
+      top: 57px; }
   .top .welcome {
     transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -89,15 +90,16 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     text-align: center;
     top: 50%;
-    width: inherit; }
+    width: 100%;
+    max-width: 960px; }
     .top .welcome .welcome-header {
       text-shadow: 0 0 10px black;
       -moz-text-shadow: 0 0 10px black;
       -webkit-text-shadow: 0 0 10px black;
       color: white;
       font-size: 5rem;
-      line-height: 6rem;
-      margin-bottom: 30px; }
+      line-height: 5rem;
+      margin-bottom: 50px; }
     .top .welcome .welcome-invite .invite-request {
       border-radius: 3px;
       -moz-border-radius: 3px;
@@ -111,9 +113,19 @@ h1, h2, h3, h4, h5, h6 {
       margin-right: 20px;
       padding: 0 10px;
       height: 40px;
-      width: calc(70% - 111px); }
+      max-width: 620px;
+      width: calc(100% - 120px); }
     .top .welcome .welcome-invite .invite-submit {
-      font-size: 1.75rem;
+      font-size: 1.8rem;
       width: 90px; }
+    .top .welcome .welcome-slogan {
+      text-shadow: 0 0 10px black;
+      -moz-text-shadow: 0 0 10px black;
+      -webkit-text-shadow: 0 0 10px black;
+      color: white;
+      font-size: 2.5rem;
+      margin: 30px auto 0;
+      line-height: 4rem;
+      max-width: 650px; }
 
 /*# sourceMappingURL=main.css.map */

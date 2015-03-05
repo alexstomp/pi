@@ -7,7 +7,7 @@
     background-position: center bottom
     height: 100%
     .head
-        padding: 25px
+        padding: 50px 25px
         position: relative
         .logo
             img
@@ -15,30 +15,39 @@
         .nav
             position: absolute
             right: 25px
-            top: 32px
+            top: 57px
     .welcome
         +transform(translateY(-50%))
         padding: 0 25px
         position: absolute
         text-align: center
         top: 50%
-        width: inherit
+        width: 100%
+        max-width: 960px
         .welcome-header
             +text-shadow(0 0 10px black)
             color: white
             font-size: 5rem
-            line-height: 6rem
-            margin-bottom: 30px
+            line-height: 5rem
+            margin-bottom: 50px
         .welcome-invite
             .invite-request
                 +roundedCorners()
-                border: 1px solid $dark_purple
+                border: 1px solid $dark_highlight
                 font-size: 1.75rem
                 line-height: 40px
                 margin-right: 20px
                 padding: 0 10px
                 height: 40px
-                width: calc(70% - 111px)
+                max-width: 620px
+                width: calc(100% - 120px)
             .invite-submit
-                font-size: 1.75rem
+                font-size: 1.8rem
                 width: 90px
+        .welcome-slogan
+            +text-shadow(0 0 10px black)
+            color: white
+            font-size: 2.5rem
+            margin: 30px auto 0
+            line-height: 4rem
+            max-width: 650px

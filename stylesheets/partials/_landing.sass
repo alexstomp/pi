@@ -19,6 +19,42 @@
         li
             float: left
             margin-left: 15px
+            @media screen and (max-width: 600px)
+                display: none
+        .menu-open
+            display: none
+            .icon-menu
+                color: white
+                font-size: 45px
+                line-height: 45px
+            &:hover
+                cursor: pointer
+            @media screen and (max-width: 600px)
+                display: block
+    .mobile-nav
+        background: $dark_highlight
+        display: none
+        position: fixed
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        z-index: 100
+        li a
+            +shadow(inset 0 1px lighten($highlight, 10%))
+            background: $highlight
+            border-bottom: 1px solid $dark_highlight
+            color: $dark_highlight
+            display: block
+            font-size: 3rem
+            padding: 7.5%
+            position: relative
+            width: 100%
+            .icon-close
+                position: absolute
+                right: 7.5%
+                top: 25%
+                font-size: 4rem
 
 // HOME
 
@@ -48,6 +84,7 @@
                 font-size: 1.75rem
                 line-height: 40px
                 margin-right: 20px
+                margin-bottom: 15px
                 padding: 0 10px
                 height: 40px
                 max-width: 620px
@@ -59,11 +96,11 @@
             +text-shadow(0 0 10px black)
             color: white
             font-size: 2.5rem
-            margin: 30px auto 0
+            margin: 20px auto 0
             line-height: 4rem
             max-width: 650px
 
-// SIGNUP
+// SIGNUP & LOGIN
 
 .signup-block, .login-block
     +transform(translateY(-50%))

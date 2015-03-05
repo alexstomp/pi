@@ -4,8 +4,16 @@
 
     <title>Pi App</title>
 
+    <!-- JQUERY -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+
+    <script src="script.js" type="text/javascript"></script>
     <link rel="stylesheet" href="./stylesheets/main.css"/>
     <link rel="icon" type="image/png" href="./img/pi_icon.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   
   </head>
   
@@ -23,7 +31,24 @@
               <a href="./signup.html" class="button accent">Sign Up</a>
             </li>
             <li class="sign-in">
-              <a href="./login.html" class="button">Already have an account ?</a>
+              <a href="./login.html" class="button">Already have an account?</a>
+            </li>
+            <li class="menu-open js-menu-open">
+              <i class="icon-menu"></i>
+            </li>
+          </ul>
+          <ul class="mobile-nav">
+            <li class="sign-up">
+              <a href="./signup.html">Sign Up</a>
+            </li>
+            <li class="sign-in">
+              <a href="./login.html">Login</a>
+            </li>
+            <li class="menu-close js-menu-close">
+              <a href="#">
+                <i class="icon-close"></i>
+                Close
+              </a>
             </li>
           </ul>
         </div>
@@ -34,7 +59,7 @@
             <input class="signup-email" placeholder="email address"/>
             <input class="signup-pass" type="password" placeholder="password"/>
             <input class="signup-conf" type="password" placeholder="confirm password"/>
-            <a class="button accent">Sign Up</a>
+            <a href="./application/home.html" class="button accent">Sign Up</a>
           </div>
           <h3 class="signup-outro">By signing up, you will be able to join the courses currently set up on <span class="accent-text">Pi App</span></h3>
         </div>

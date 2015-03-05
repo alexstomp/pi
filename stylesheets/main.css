@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);
+@import url(https://s3.amazonaws.com/icomoon.io/28503/pi/style.css);
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, a, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   border: 0;
   font-size: 62.5%;
@@ -97,6 +98,46 @@ h1, h2, h3, h4, h5, h6 {
     .head .nav li {
       float: left;
       margin-left: 15px; }
+      @media screen and (max-width: 600px) {
+        .head .nav li {
+          display: none; } }
+    .head .nav .menu-open {
+      display: none; }
+      .head .nav .menu-open .icon-menu {
+        color: white;
+        font-size: 45px;
+        line-height: 45px; }
+      .head .nav .menu-open:hover {
+        cursor: pointer; }
+      @media screen and (max-width: 600px) {
+        .head .nav .menu-open {
+          display: block; } }
+  .head .mobile-nav {
+    background: #6F65A6;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100; }
+    .head .mobile-nav li a {
+      box-shadow: inset 0 1px #e1d8fa;
+      -moz-box-shadow: inset 0 1px #e1d8fa;
+      -webkit-box-shadow: inset 0 1px #e1d8fa;
+      background: #BEAAF5;
+      border-bottom: 1px solid #6F65A6;
+      color: #6F65A6;
+      display: block;
+      font-size: 3rem;
+      padding: 7.5%;
+      position: relative;
+      width: 100%; }
+      .head .mobile-nav li a .icon-close {
+        position: absolute;
+        right: 7.5%;
+        top: 25%;
+        font-size: 4rem; }
 
 .top {
   height: 100%; }
@@ -135,6 +176,7 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 1.75rem;
       line-height: 40px;
       margin-right: 20px;
+      margin-bottom: 15px;
       padding: 0 10px;
       height: 40px;
       max-width: 620px;
@@ -148,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
       -webkit-text-shadow: 0 0 10px black;
       color: white;
       font-size: 2.5rem;
-      margin: 30px auto 0;
+      margin: 20px auto 0;
       line-height: 4rem;
       max-width: 650px; }
 

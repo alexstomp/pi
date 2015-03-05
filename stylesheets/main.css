@@ -78,6 +78,29 @@ h1, h2, h3, h4, h5, h6 {
       background: #9b7cf0;
       color: #584f89; }
 
+.success-alert {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background: #EDEDFD;
+  border: 2px solid #EDEDFD;
+  color: #584f89;
+  display: inline-block;
+  font-size: 1.65rem;
+  font-weight: 400;
+  padding: 10px 15px 11px;
+  position: relative;
+  width: 100%; }
+  .success-alert .icon-close {
+    font-size: 1.7rem;
+    position: absolute;
+    right: 10px; }
+    .success-alert .icon-close:hover {
+      cursor: pointer; }
+
 .page-landing, .page-signup, .page-login {
   background-size: cover;
   -moz-background-size: cover;

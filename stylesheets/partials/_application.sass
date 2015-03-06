@@ -1,3 +1,17 @@
+// APPLICATION LAYOUT
+
+.page-course
+    min-height: 100%
+    width: 100%
+    .sidebar
+        position: fixed
+        height: 100%
+        width: 250px
+    .content
+        position: absolute
+        right: 0
+        width: calc(100% - 250px)
+
 // SIDEBAR
 
 .sidebar
@@ -34,62 +48,55 @@
                 color: white
                 font-size: 1.4rem
     .sidebar-header
-        border-bottom: 1px solid darken($dark_highlight, 20%)
-        padding: 10px 15px 10px
+        padding: 15px 15px 5px
         color: $highlight
         font-weight: 400
         text-transform: uppercase
         font-size: 1.2rem
     .course-joins
-        +shadow(0 1px 0 $dark_highlight)
         .course-join
-            +shadow(inset 0 1px 0 $dark_highlight)
-            background: darken($dark_highlight, 5%)
-            border-bottom: 1px solid darken($dark_highlight, 20%)
             a
                 color: lighten($highlight, 10%)
-                font-size: 1.5rem
+                font-size: 1.4rem
+                font-weight: 300
                 display: block
-                padding: 15px
+                padding: 7px 15px
                 position: relative
                 .course-notifications
                     +shadow(0 0 3px darken($dark_highlight, 10%))
                     +roundedCorners
                     background: #E05047
                     color: white
-                    font-size: 1.5rem
+                    font-size: 1.4rem
                     font-weight: 400
                     padding: 2px 5px
                     position: absolute
-                    top: 13px
+                    top: 5px
                     right: 15px
             &:hover
                 +shadow(none)
-                background: darken($dark_highlight, 10%)
+                background: $dark_highlight
                 a
                     color: white
-    .sidebar-menu
-        +shadow(inset 0 1px 0 $dark_highlight)
-        background: darken($dark_highlight, 5%)
-        border-top: 1px solid darken($dark_highlight, 15%)
-        padding: 15px
-        position: absolute
-        bottom: 0
-        width: 100%
-        .create-course
-            text-align: center
-            width: 100%
-
+    .create-course
+        margin: 15px
+        text-align: center
+        width: calc(100% - 30px)
 
 // CONTENT (post feed)
 
 .content
     .content-header
         @extend .clearfix
+        background: white
         border-bottom: 1px solid $border_light
         padding: 15px
-        position: relative
-        width: 100%
+        position: fixed
+        top: 0
+        right: 0
+        height: 71px
+        width: calc(100% - 250px)
+        z-index: 75
         .header-logo
             float: left
             margin-left: 5px
@@ -147,6 +154,7 @@
         border-bottom: 1px solid $border_light
         padding: 0 15px
         position: relative
+        margin-top: 71px
         width: 100%
         .sub-header-link
             display: inline-block
@@ -222,6 +230,7 @@ $content_width: 670px
 
 .posts
     max-width: $content_width
+    padding-bottom: 25px
     .post
         @extend .clearfix
         display: block

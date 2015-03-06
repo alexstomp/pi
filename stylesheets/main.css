@@ -32,18 +32,6 @@ body {
   max-width: 960px;
   width: 100%; }
 
-.page-course {
-  min-height: 100%;
-  width: 100%; }
-  .page-course .sidebar {
-    position: fixed;
-    height: 100%;
-    width: 250px; }
-  .page-course .content {
-    position: absolute;
-    right: 0;
-    width: calc(100% - 250px); }
-
 li, a, p, h1, h2, h3, h4, h5, h6, label, input, th, td {
   list-style: none outside none;
   text-decoration: none;
@@ -291,6 +279,18 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 4rem;
     max-width: 500px; }
 
+.page-course {
+  min-height: 100%;
+  width: 100%; }
+  .page-course .sidebar {
+    position: fixed;
+    height: 100%;
+    width: 250px; }
+  .page-course .content {
+    position: absolute;
+    right: 0;
+    width: calc(100% - 250px); }
+
 .sidebar {
   background: #584f89; }
   .sidebar .sidebar-user {
@@ -334,72 +334,58 @@ h1, h2, h3, h4, h5, h6 {
         color: white;
         font-size: 1.4rem; }
   .sidebar .sidebar-header {
-    border-bottom: 1px solid #433c69;
-    padding: 10px 15px 10px;
+    padding: 15px 15px 5px;
     color: #BEAAF5;
     font-weight: 400;
     text-transform: uppercase;
     font-size: 1.2rem; }
-  .sidebar .course-joins {
-    box-shadow: 0 1px 0 #6F65A6;
-    -moz-box-shadow: 0 1px 0 #6F65A6;
-    -webkit-box-shadow: 0 1px 0 #6F65A6; }
-    .sidebar .course-joins .course-join {
-      box-shadow: inset 0 1px 0 #6F65A6;
-      -moz-box-shadow: inset 0 1px 0 #6F65A6;
-      -webkit-box-shadow: inset 0 1px 0 #6F65A6;
-      background: #625899;
-      border-bottom: 1px solid #433c69; }
-      .sidebar .course-joins .course-join a {
-        color: #e1d8fa;
-        font-size: 1.5rem;
-        display: block;
-        padding: 15px;
-        position: relative; }
-        .sidebar .course-joins .course-join a .course-notifications {
-          box-shadow: 0 0 3px #584f89;
-          -moz-box-shadow: 0 0 3px #584f89;
-          -webkit-box-shadow: 0 0 3px #584f89;
-          border-radius: 3px;
-          -moz-border-radius: 3px;
-          -webkit-border-radius: 3px;
-          background-clip: padding-box;
-          -moz-background-clip: padding-box;
-          -webkit-background-clip: padding-box;
-          background: #E05047;
-          color: white;
-          font-size: 1.5rem;
-          font-weight: 400;
-          padding: 2px 5px;
-          position: absolute;
-          top: 13px;
-          right: 15px; }
-      .sidebar .course-joins .course-join:hover {
-        box-shadow: none;
-        -moz-box-shadow: none;
-        -webkit-box-shadow: none;
-        background: #584f89; }
-        .sidebar .course-joins .course-join:hover a {
-          color: white; }
-  .sidebar .sidebar-menu {
-    box-shadow: inset 0 1px 0 #6F65A6;
-    -moz-box-shadow: inset 0 1px 0 #6F65A6;
-    -webkit-box-shadow: inset 0 1px 0 #6F65A6;
-    background: #625899;
-    border-top: 1px solid #4e4679;
-    padding: 15px;
-    position: absolute;
-    bottom: 0;
-    width: 100%; }
-    .sidebar .sidebar-menu .create-course {
-      text-align: center;
-      width: 100%; }
+  .sidebar .course-joins .course-join a {
+    color: #e1d8fa;
+    font-size: 1.4rem;
+    font-weight: 300;
+    display: block;
+    padding: 7px 15px;
+    position: relative; }
+    .sidebar .course-joins .course-join a .course-notifications {
+      box-shadow: 0 0 3px #584f89;
+      -moz-box-shadow: 0 0 3px #584f89;
+      -webkit-box-shadow: 0 0 3px #584f89;
+      border-radius: 3px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      background-clip: padding-box;
+      -moz-background-clip: padding-box;
+      -webkit-background-clip: padding-box;
+      background: #E05047;
+      color: white;
+      font-size: 1.4rem;
+      font-weight: 400;
+      padding: 2px 5px;
+      position: absolute;
+      top: 5px;
+      right: 15px; }
+  .sidebar .course-joins .course-join:hover {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    background: #6F65A6; }
+    .sidebar .course-joins .course-join:hover a {
+      color: white; }
+  .sidebar .create-course {
+    margin: 15px;
+    text-align: center;
+    width: calc(100% - 30px); }
 
 .content .content-header {
+  background: white;
   border-bottom: 1px solid #dadfea;
   padding: 15px;
-  position: relative;
-  width: 100%; }
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 71px;
+  width: calc(100% - 250px);
+  z-index: 75; }
   .content .content-header .header-logo {
     float: left;
     margin-left: 5px;
@@ -471,6 +457,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #dadfea;
   padding: 0 15px;
   position: relative;
+  margin-top: 71px;
   width: 100%; }
   .content .sub-header .sub-header-link {
     display: inline-block;
@@ -549,7 +536,8 @@ h1, h2, h3, h4, h5, h6 {
         cursor: pointer; }
 
 .posts {
-  max-width: 670px; }
+  max-width: 670px;
+  padding-bottom: 25px; }
   .posts .post {
     display: block;
     padding: 25px;

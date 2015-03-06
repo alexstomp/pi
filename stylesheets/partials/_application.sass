@@ -5,24 +5,24 @@
     .sidebar-user
         background: darken($dark_highlight, 5%)
         border-bottom: 1px solid darken($dark_highlight, 15%)
-        padding: 15px
+        padding: 10px
         position: relative
-        height: 100px
+        height: 71px
         width: 100%
         .user-avatar img
             +roundedCorners(5px)
             +shadow(0 0 5px 0 darken($dark_highlight, 10%))
             position: absolute
-            width: 70px
+            width: 51px
         .user-details
             +transform(translateY(-50%))
             position: absolute
             top: 50%
-            padding-left: 85px
+            padding-left: 65px
             width: 100%
             .user-handle
                 color: white
-                font-size: 2rem
+                font-size: 1.8rem
                 line-height: 2.5rem
             .user-rank
                 color: lighten($highlight, 5%)
@@ -32,7 +32,7 @@
             right: 10px
             .icon-settings
                 color: white
-                font-size: 1.7rem
+                font-size: 1.4rem
     .sidebar-header
         border-bottom: 1px solid darken($dark_highlight, 20%)
         padding: 10px 15px 10px
@@ -159,16 +159,74 @@
                 border-bottom: 3px solid $dark_highlight
                 color: $dark_highlight
 
+$content_width: 670px
+
+// NEW POST
+
+.new-post
+    padding: 25px
+    padding-bottom: 0px
+    max-width: $content_width
+    .avatar
+        +roundedCorners(4px)
+        width: 50px
+    .new-post-field
+        +roundedCorners()
+        background: white
+        border: 1px solid $border_light
+        float: right
+        height: 50px
+        position: relative
+        width: calc(100% - 75px)
+        .new-post-attach
+            position: absolute
+            left: 0
+            text-align: center
+            width: 35px
+            .icon-attach
+                color: darken($border_light, 15%)
+                font-size: 2rem
+                line-height: 50px
+            &:hover
+                .icon-attach
+                    color: darken($border_light, 25%)
+        input
+            border: 0
+            outline: 0
+            font-size: 1.4rem
+            min-height: 48px
+            padding-left: 35px
+            padding-right: 40px
+            width: 100%
+        .new-post-submit
+            +roundedCorners(0 3px 3px 0)
+            background: $highlight
+            border: 1px solid darken($highlight, 5%)
+            position: absolute
+            top: -1px
+            right: -1px
+            color: $dark_highlight
+            font-size: 1.6rem
+            padding: 0 10px
+            line-height: 48px
+            &:hover
+                background: darken($highlight, 5%)
+                color: darken($dark_highlight, 5%)
+                cursor: pointer 
+
+
+
 // POSTS
 
 // LAYOUT
 
 .posts
+    max-width: $content_width
     .post
         @extend .clearfix
         display: block
-        border-bottom: 1px solid $border-light
         padding: 25px
+        padding-bottom: 0
         position: relative
         .post-left
             position: absolute
@@ -237,6 +295,8 @@
         margin-right: 15px
         position: relative
         width: 250px
+        &:last-child
+            margin-right: 0
         .file-icon
             position: absolute
             left: 10px
@@ -409,7 +469,7 @@
         padding: 10px
         position: relative
         width: calc(100% - 60px)
-        .new-comment-upload
+        .new-comment-attach
             position: absolute
             left: 0
             text-align: center

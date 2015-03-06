@@ -1,0 +1,150 @@
+// SIDEBAR
+
+.sidebar
+    background: darken($dark_highlight, 5%)
+    .sidebar-user
+        +shadow(0 1px 0 lighten($dark_highlight, 5%))
+        background: darken($dark_highlight, 10%)
+        border-bottom: 1px solid darken($dark_highlight, 20%)
+        padding: 15px
+        position: relative
+        height: 100px
+        width: 100%
+        .user-avatar img
+            +roundedCorners(35px)
+            +shadow(0 0 5px 0 darken($dark_highlight, 20%))
+            position: absolute
+            width: 70px
+        .user-details
+            +transform(translateY(-50%))
+            position: absolute
+            top: 50%
+            padding-left: 85px
+            width: 100%
+            .user-handle
+                color: white
+                font-size: 2rem
+                line-height: 2.5rem
+            .user-rank
+                color: lighten($highlight, 5%)
+        .user-settings
+            bottom: 10px
+            position: absolute
+            right: 10px
+            .icon-settings
+                color: white
+                font-size: 1.7rem
+    .course-joins
+        .course-join a
+            +shadow(0 1px 0 $dark_highlight)
+            border-bottom: 1px solid darken($dark_highlight, 20%)
+            color: lighten($highlight, 10%)
+            display: block
+            padding: 15px
+            position: relative
+            .course-notifications
+                +roundedCorners
+                background: $highlight
+                color: $dark_highlight
+                font-size: 1.5rem
+                font-weight: 600
+                padding: 2px 5px
+                position: absolute
+                top: 13px
+                right: 15px
+
+            &:hover
+                +shadow(0 1px 0 darken($dark_highlight, 10%))
+                border-bottom-color: $dark_highlight
+                background: $dark_highlight
+                color: white
+    .create-course
+        margin: 25px 15px
+        text-align: center
+        width: calc(100% - 30px)
+
+
+// CONTENT (post feed)
+
+.content
+    .content-header
+        @extend .clearfix
+        border-bottom: 1px solid $border_light
+        padding: 15px
+        position: relative
+        width: 100%
+        .header-logo
+            float: left
+            margin-left: 5px
+            margin-right: 15px
+            padding-top: 5px
+            img
+                width: 30px
+        .header-title
+            display: inline-block
+            font-size: 2.3rem
+            line-height: 4rem
+            font-weight: 400
+        .header-right
+            display: block
+            position: absolute
+            right: 15px
+            top: 15px
+            height: 42px
+            .button.accent
+                display: inline-block
+            .header-search
+                +roundedCorners()
+                border: 1px solid $border_light
+                display: inline-block
+                position: relative
+                vertical-align: top
+                height: 42px
+                margin-right: 10px
+                top: 0
+                width: 140px
+                input
+                    +roundedCorners()
+                    border: 0
+                    font-size: 1.6rem
+                    line-height: 38px
+                    outline: 0
+                    padding-left: 10px
+                    max-width: calc(100% - 45px)
+                .icon-search
+                    +roundedCorners(0 3px 3px 0)
+                    background: lighten($border_light, 5%)
+                    border: 1px solid darken($border_light, 5%)
+                    color: $dark_highlight
+                    position: absolute
+                    top: -1px
+                    right: -1px
+                    font-size: 1.6rem
+                    line-height: 40px
+                    padding: 0 10px
+                    &:hover
+                        background: $border-light
+                        cursor: pointer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

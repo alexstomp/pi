@@ -19,6 +19,7 @@
 
     <!-- PAGE :: COURSE -->
     <section class="page-course">
+      <!-- SIDEBAR -->
       <div class="sidebar">
         <div class="sidebar-user">
           <a href="#" class="user-avatar">
@@ -67,6 +68,7 @@
           <a href="#" class="button create-course">+ Add Course</a>
         </div>
       </div>
+      <!-- END SIDEBAR -->
 
       <div class="content">
         <div class="content-header">
@@ -81,13 +83,13 @@
               <input placeholder="Search.."/>
               <i class="icon-search"></i>
             </div>
-            <a href="#" class="button accent">+ New Post</a>
+            <!--<a href="#" class="button accent">+ New Post</a>-->
           </div>
         </div>
         <div class="sub-header">
           <a class="sub-header-link active" href="#">Posts</a>
           <a class="sub-header-link" href="#">Resources</a>
-          <a class="sub-header-link" href="#">Favorites</a>
+          <a class="sub-header-link" href="#">Favorited</a>
           <a class="sub-header-link" href="#">Members</a>
         </div>
 
@@ -142,31 +144,62 @@
                   </a>
                 </div>
                 <!-- Comments -->
-                <ol class="post-comments">
-                  <li class="comment">
-                    <div class="comment-left">
-                      <img class="avatar" src="../img/avatar.jpg"/>
-                    </div>
-                    <div class="comment-content">
-                      <div class="comment-meta">
-                        <h4 class="meta-user">Alex Stomp</h4>
-                        <p class="meta-time">10s ago</p>
+                <div class="post-comments">
+                  <!-- COMMENT -->
+                  <ol class="comments">
+                    <li class="comment">
+                      <div class="comment-left">
+                        <img class="avatar" src="../img/avatar2.jpg"/>
                       </div>
-                      <div class="comment-body">
-                        <p>I think it just works. Plain & Simple.</p>
+                      <div class="comment-content">
+                        <div class="comment-meta">
+                          <h4 class="meta-user">Kate Beckett</h4>
+                          <p class="meta-time">10s ago</p>
+                        </div>
+                        <div class="comment-body">
+                          <p>I think it just works. Plain & Simple.</p>
+                        </div>
+                        <div class="comment-attachments">
+                          <a class="file">
+                            <div class="file-name">
+                              AssuredSuccess101
+                            </div>
+                            <div class="file-meta">
+                              <span class="meta-downloads">
+                                <i class="icon-download"></i>
+                                5
+                              </span>
+                              <span class="meta-size">14 MB</span>
+                            </div>
+                            <img class="file-icon" src="../img/file.png" />
+                          </a>
+                        </div>
                       </div>
+                    </li>
+                  </ol>
+                  <!-- NEW COMMENT -->
+                  <div class="new-comment">
+                    <img class="avatar" src="../img/avatar.jpg"/>
+                    <div class="new-comment-field">
+                      <a href="#" class="new-comment-upload">
+                        <i class="icon-attach"></i>
+                      </a>
+                      <input placeholder="Write a comment..." />
+                      <a href="#" class="new-comment-submit">
+                        <i class="icon-reply"></i>
+                      </a>
                     </div>
-                  </li>
-                </ol>
+                  </div>
+                </div>
               </div>
             </li>
             <li class="post">
               <div class="post-left">
-                <img class="avatar round" src="../img/avatar.jpg"/>
+                <img class="avatar" src="../img/avatar2.jpg"/>
               </div>
               <div class="post-content">
                 <div class="post-meta">
-                  <h4 class="meta-user">Alex Stomp</h4>
+                  <h4 class="meta-user">Kate Beckett</h4>
                   <p class="meta-time">30s ago</p>
                   <div class="meta-stats">
                     <span class="stat-wrap">
@@ -177,6 +210,62 @@
                 </div>
                 <div class="post-body">
                   <p>Writing an essay on Nelly McClung. How was McClung's maternal feminism both radical and conservative? In what ways did it challenge the traditional social and political roles for women, and in what ways did her feminism endorse or accept existing gender roles? Be sure to discuss her passion for women's suffrage and social reform, or her involvement in the persons case.</p>
+                </div>
+                <!-- Comments -->
+                <div class="post-comments">
+                  <!-- COMMENT -->
+                  <ol class="comments"></ol>
+                  <!-- NEW COMMENT -->
+                  <div class="new-comment">
+                    <img class="avatar" src="../img/avatar.jpg"/>
+                    <div class="new-comment-field">
+                      <a href="#" class="new-comment-upload">
+                        <i class="icon-attach"></i>
+                      </a>
+                      <input placeholder="Write a comment..." />
+                      <a href="#" class="new-comment-submit">
+                        <i class="icon-reply"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="post">
+              <div class="post-left">
+                <img class="avatar" src="../img/avatar3.jpg"/>
+              </div>
+              <div class="post-content">
+                <div class="post-meta">
+                  <h4 class="meta-user">Mrs. Chanandler Bong</h4>
+                  <p class="meta-time">30s ago</p>
+                  <div class="meta-stats">
+                    <span class="stat-wrap">
+                      <i class="icon-star"></i>
+                      12
+                    </span>
+                  </div>
+                </div>
+                <div class="post-body">
+                  <p>Nice camouflage. For a minute, I almost didn't see you.</p>
+                </div>
+                <!-- Comments -->
+                <div class="post-comments">
+                  <!-- COMMENT -->
+                  <ol class="comments"></ol>
+                  <!-- NEW COMMENT -->
+                  <div class="new-comment">
+                    <img class="avatar" src="../img/avatar.jpg"/>
+                    <div class="new-comment-field">
+                      <a href="#" class="new-comment-upload">
+                        <i class="icon-attach"></i>
+                      </a>
+                      <input placeholder="Write a comment..." />
+                      <a href="#" class="new-comment-submit">
+                        <i class="icon-reply"></i>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>

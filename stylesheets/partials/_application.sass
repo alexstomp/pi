@@ -10,8 +10,8 @@
         height: 100px
         width: 100%
         .user-avatar img
-            +roundedCorners(35px)
-            +shadow(0 0 5px 0 darken($dark_highlight, 20%))
+            +roundedCorners(5px)
+            +shadow(0 0 5px 0 darken($dark_highlight, 10%))
             position: absolute
             width: 70px
         .user-details
@@ -119,7 +119,7 @@
                 height: 42px
                 margin-right: 10px
                 top: 0
-                width: 140px
+                width: 200px
                 input
                     +roundedCorners()
                     border: 0
@@ -291,7 +291,7 @@
             width: 40px
         .comment-content
             padding-left: 60px
-            min-height: 50px
+            min-height: 40px
             width: 100%
 
 // styling
@@ -301,54 +301,145 @@
     border-left: 5px solid $border_light
     margin-top: 20px
     padding-left: 25px
-    .comment
-        .comment-left
-            .avatar
-                +roundedCorners(4px)
-                width: 40px
-                &.round
-                    +roundedCorners(25px)
-        .comment-content
-            .comment-meta
-                @extend .clearfix
-                .meta-user
-                    display: inline-block
-                    font-weight: bold
-                    font-size: 1.6rem
-                .meta-time
-                    color: darken($border_light, 30%)
-                    display: inline-block
-                    font-size: 1.4rem
-                    font-weight: 100
-                    margin-left: 5px
-                .meta-stats
-                    display: inline-block
-                    .stat-wrap
+    .comments
+        .comment
+            .comment-left
+                .avatar
+                    +roundedCorners(4px)
+                    width: 40px
+                    &.round
+                        +roundedCorners(25px)
+            .comment-content
+                .comment-meta
+                    @extend .clearfix
+                    .meta-user
+                        display: inline-block
+                        font-weight: bold
+                        font-size: 1.6rem
+                    .meta-time
                         color: darken($border_light, 30%)
-                        padding-left: 10px
+                        display: inline-block
                         font-size: 1.4rem
-                        .icon-star
-                            font-size: 1.4rem
-                            padding-right: 5px
-            .comment-body
-                margin-top: 5px
-                p
-                    font-size: 1.5rem
-                    line-height: 2.5rem
+                        font-weight: 100
+                        margin-left: 5px
+                    .meta-stats
+                        display: inline-block
+                        .stat-wrap
+                            color: darken($border_light, 30%)
+                            padding-left: 10px
+                            font-size: 1.5rem
+                            .icon-star
+                                font-size: 1.5rem
+                                padding-right: 5px
+                .comment-body
+                    p
+                        font-size: 1.5rem
+                        line-height: 2.2rem
+                .comment-attachments
+                    @extend .clearfix
+                    border-left: 5px solid lighten($border_light, 3%)
+                    margin-top: 10px
+                    padding-left: 25px
+                    .file
+                        +roundedCorners()
+                        background: lighten($border_light, 5%)
+                        border: 1px solid $border_light
+                        float: left
+                        height: 68px
+                        margin-right: 15px
+                        position: relative
+                        width: 250px
+                        .file-icon
+                            position: absolute
+                            left: 10px
+                            bottom: 8px
+                            height: 50px
+                        .file-name
+                            border-top: 1px solid $border_light
+                            background: lighten($border_light, 12%)
+                            bottom: 0
+                            color: darken($border_light, 35%)
+                            left: 0
+                            padding: 0 10px 0 58px
+                            position: absolute
+                            height: 40px
+                            line-height: 38px
+                            font-size: 1.6rem
+                            font-weight: 600
+                            width: 100%
+                        .file-meta
+                            color: darken($border_light, 20%)
+                            position: absolute
+                            padding: 0 10px 0 58px
+                            left: 0
+                            bottom: 42px
+                            width: 100%
+                            .meta-downloads
+                                float: left
+                                font-size: 1.5rem
+                                .icon-download
+                                    font-size: 1.3rem
+                            .meta-size
+                                float: right
+                                font-size: 1.5rem
+                        &:hover
+                            background: lighten($border_light, 3%)
+                            cursor: pointer
+                            .file-name
+                                background: lighten($border-light, 10%)
+                                color: darken($border_light, 40%)
 
 
 
+// NEW COMMENT
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.new-comment
+    margin-top: 15px
+    .avatar
+        +roundedCorners(4px)
+        float: left
+        margin-right: 15px
+        width: 40px
+    .new-comment-field
+        +roundedCorners()
+        background: white
+        border: 1px solid $border_light
+        float: left
+        height: 42px
+        padding: 10px
+        position: relative
+        width: calc(100% - 60px)
+        .new-comment-upload
+            position: absolute
+            left: 0
+            text-align: center
+            width: 35px
+            .icon-attach
+                color: darken($border_light, 15%)
+                font-size: 2rem
+            &:hover
+                .icon-attach
+                    color: darken($border_light, 25%)
+        input
+            border: 0
+            outline: 0
+            font-size: 1.4rem
+            line-height: 20px
+            padding-left: 25px
+            padding-right: 40px
+            width: 100%
+        .new-comment-submit
+            +roundedCorners(0 3px 3px 0)
+            background: lighten($border_light, 5%)
+            border: 1px solid darken($border_light, 5%)
+            position: absolute
+            top: -1px
+            right: -1px
+            .icon-reply
+                color: $dark_highlight
+                font-size: 1.6rem
+                line-height: 40px
+                padding: 0 10px
+            &:hover
+                background: $border-light
+                cursor: pointer 

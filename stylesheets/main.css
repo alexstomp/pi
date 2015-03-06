@@ -14,7 +14,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.clearfix:after, .content .content-header:after, .content .sub-header:after, .posts .post:after, .post .post-content .post-meta:after, .post .post-content .post-attachments:after, .post .post-content .post-comments:after {
+.clearfix:after, .content .content-header:after, .content .sub-header:after, .posts .post:after, .post .post-content .post-meta:after, .post-attachments:after, .post-comments .comment:after, .post-comments:after, .post-comments .comment .comment-content .comment-meta:after {
   content: "";
   display: table;
   clear: both; }
@@ -292,13 +292,10 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 500px; }
 
 .sidebar {
-  background: #625899; }
+  background: #584f89; }
   .sidebar .sidebar-user {
-    box-shadow: 0 1px 0 #7e75af;
-    -moz-box-shadow: 0 1px 0 #7e75af;
-    -webkit-box-shadow: 0 1px 0 #7e75af;
-    background: #584f89;
-    border-bottom: 1px solid #433c69;
+    background: #625899;
+    border-bottom: 1px solid #4e4679;
     padding: 15px;
     position: relative;
     height: 100px;
@@ -336,44 +333,67 @@ h1, h2, h3, h4, h5, h6 {
       .sidebar .sidebar-user .user-settings .icon-settings {
         color: white;
         font-size: 1.7rem; }
-  .sidebar .course-joins .course-join a {
+  .sidebar .sidebar-header {
+    border-bottom: 1px solid #433c69;
+    padding: 10px 15px 10px;
+    color: #BEAAF5;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.2rem; }
+  .sidebar .course-joins {
     box-shadow: 0 1px 0 #6F65A6;
     -moz-box-shadow: 0 1px 0 #6F65A6;
-    -webkit-box-shadow: 0 1px 0 #6F65A6;
-    border-bottom: 1px solid #433c69;
-    color: #e1d8fa;
-    display: block;
+    -webkit-box-shadow: 0 1px 0 #6F65A6; }
+    .sidebar .course-joins .course-join {
+      box-shadow: inset 0 1px 0 #6F65A6;
+      -moz-box-shadow: inset 0 1px 0 #6F65A6;
+      -webkit-box-shadow: inset 0 1px 0 #6F65A6;
+      background: #625899;
+      border-bottom: 1px solid #433c69; }
+      .sidebar .course-joins .course-join a {
+        color: #e1d8fa;
+        font-size: 1.5rem;
+        display: block;
+        padding: 15px;
+        position: relative; }
+        .sidebar .course-joins .course-join a .course-notifications {
+          box-shadow: 0 0 3px #584f89;
+          -moz-box-shadow: 0 0 3px #584f89;
+          -webkit-box-shadow: 0 0 3px #584f89;
+          border-radius: 3px;
+          -moz-border-radius: 3px;
+          -webkit-border-radius: 3px;
+          background-clip: padding-box;
+          -moz-background-clip: padding-box;
+          -webkit-background-clip: padding-box;
+          background: #E05047;
+          color: white;
+          font-size: 1.5rem;
+          font-weight: 400;
+          padding: 2px 5px;
+          position: absolute;
+          top: 13px;
+          right: 15px; }
+      .sidebar .course-joins .course-join:hover {
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        background: #584f89; }
+        .sidebar .course-joins .course-join:hover a {
+          color: white; }
+  .sidebar .sidebar-menu {
+    box-shadow: inset 0 1px 0 #6F65A6;
+    -moz-box-shadow: inset 0 1px 0 #6F65A6;
+    -webkit-box-shadow: inset 0 1px 0 #6F65A6;
+    background: #625899;
+    border-top: 1px solid #4e4679;
     padding: 15px;
-    position: relative; }
-    .sidebar .course-joins .course-join a .course-notifications {
-      box-shadow: 0 0 3px #584f89;
-      -moz-box-shadow: 0 0 3px #584f89;
-      -webkit-box-shadow: 0 0 3px #584f89;
-      border-radius: 3px;
-      -moz-border-radius: 3px;
-      -webkit-border-radius: 3px;
-      background-clip: padding-box;
-      -moz-background-clip: padding-box;
-      -webkit-background-clip: padding-box;
-      background: #BEAAF5;
-      color: #6F65A6;
-      font-size: 1.5rem;
-      font-weight: 600;
-      padding: 2px 5px;
-      position: absolute;
-      top: 13px;
-      right: 15px; }
-    .sidebar .course-joins .course-join a:hover {
-      box-shadow: 0 1px 0 #584f89;
-      -moz-box-shadow: 0 1px 0 #584f89;
-      -webkit-box-shadow: 0 1px 0 #584f89;
-      border-bottom-color: #6F65A6;
-      background: #6F65A6;
-      color: white; }
-  .sidebar .create-course {
-    margin: 25px 15px;
-    text-align: center;
-    width: calc(100% - 30px); }
+    position: absolute;
+    bottom: 0;
+    width: 100%; }
+    .sidebar .sidebar-menu .create-course {
+      text-align: center;
+      width: 100%; }
 
 .content .content-header {
   border-bottom: 1px solid #dadfea;
@@ -499,28 +519,34 @@ h1, h2, h3, h4, h5, h6 {
 .post .post-content .post-meta .meta-time {
   color: #788bb3;
   display: inline-block;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 100;
   margin-left: 5px; }
 .post .post-content .post-meta .meta-stats {
-  float: right; }
+  display: inline-block; }
   .post .post-content .post-meta .meta-stats .stat-wrap {
     color: #788bb3;
-    padding-left: 25px;
-    font-size: 1.7rem; }
-    .post .post-content .post-meta .meta-stats .stat-wrap .icon-star, .post .post-content .post-meta .meta-stats .stat-wrap .icon-comment {
-      font-size: 1.5rem;
-      padding-right: 5px; }
+    padding-left: 5px;
+    font-size: 1.4rem;
+    font-weight: 100; }
+    .post .post-content .post-meta .meta-stats .stat-wrap .icon-star {
+      color: #99a7c5;
+      font-size: 1.4rem; }
+    .post .post-content .post-meta .meta-stats .stat-wrap:hover {
+      cursor: pointer; }
+      .post .post-content .post-meta .meta-stats .stat-wrap:hover .icon-star {
+        color: #fecb2f; }
 .post .post-content .post-body {
   margin-top: 5px; }
   .post .post-content .post-body p {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     line-height: 2.5rem; }
-.post .post-content .post-attachments {
+
+.post-attachments {
   border-left: 5px solid #dadfea;
-  margin-top: 15px;
+  margin-top: 20px;
   padding-left: 25px; }
-  .post .post-content .post-attachments .file {
+  .post-attachments .file {
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -530,49 +556,103 @@ h1, h2, h3, h4, h5, h6 {
     background: #eaedf3;
     border: 1px solid #dadfea;
     float: left;
-    height: 75px;
+    height: 68px;
     margin-right: 15px;
     position: relative;
-    width: 200px; }
-    .post .post-content .post-attachments .file .file-icon {
+    width: 250px; }
+    .post-attachments .file .file-icon {
       position: absolute;
       left: 10px;
       bottom: 8px;
-      width: 30px; }
-    .post .post-content .post-attachments .file .file-name {
-      border-top: 1px solid #e1e5ee;
+      height: 50px; }
+    .post-attachments .file .file-name {
+      border-top: 1px solid #dadfea;
       background: white;
       bottom: 0;
+      color: #687da9;
       left: 0;
-      padding: 0 10px 0 50px;
+      padding: 0 10px 0 58px;
       position: absolute;
-      height: 32px;
-      line-height: 32px;
-      font-size: 1.3rem;
+      height: 40px;
+      line-height: 38px;
+      font-size: 1.6rem;
+      font-weight: 600;
       width: 100%; }
-    .post .post-content .post-attachments .file .file-meta {
+    .post-attachments .file .file-meta {
       color: #99a7c5;
       position: absolute;
-      padding: 0 10px 0 50px;
+      padding: 0 10px 0 58px;
       left: 0;
-      bottom: 35px;
+      bottom: 42px;
       width: 100%; }
-      .post .post-content .post-attachments .file .file-meta .meta-downloads {
+      .post-attachments .file .file-meta .meta-downloads {
         float: left;
         font-size: 1.5rem; }
-        .post .post-content .post-attachments .file .file-meta .meta-downloads .icon-download {
+        .post-attachments .file .file-meta .meta-downloads .icon-download {
           font-size: 1.3rem; }
-      .post .post-content .post-attachments .file .file-meta .meta-size {
+      .post-attachments .file .file-meta .meta-size {
         float: right;
         font-size: 1.5rem; }
-    .post .post-content .post-attachments .file:hover {
+    .post-attachments .file:hover {
       background: #e4e7f0;
       cursor: pointer; }
-      .post .post-content .post-attachments .file:hover .file-name {
-        background: #fbfbfc; }
-.post .post-content .post-comments {
+      .post-attachments .file:hover .file-name {
+        background: #fbfbfc;
+        color: #5a6f9e; }
+
+.post-comments .comment {
+  position: relative; }
+  .post-comments .comment .comment-left {
+    position: absolute;
+    text-align: right;
+    width: 40px; }
+  .post-comments .comment .comment-content {
+    padding-left: 60px;
+    min-height: 50px;
+    width: 100%; }
+
+.post-comments {
   border-left: 5px solid #dadfea;
-  margin-top: 25px;
+  margin-top: 20px;
   padding-left: 25px; }
+  .post-comments .comment .comment-left .avatar {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    width: 40px; }
+    .post-comments .comment .comment-left .avatar.round {
+      border-radius: 25px;
+      -moz-border-radius: 25px;
+      -webkit-border-radius: 25px;
+      background-clip: padding-box;
+      -moz-background-clip: padding-box;
+      -webkit-background-clip: padding-box; }
+  .post-comments .comment .comment-content .comment-meta .meta-user {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.6rem; }
+  .post-comments .comment .comment-content .comment-meta .meta-time {
+    color: #788bb3;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 100;
+    margin-left: 5px; }
+  .post-comments .comment .comment-content .comment-meta .meta-stats {
+    display: inline-block; }
+    .post-comments .comment .comment-content .comment-meta .meta-stats .stat-wrap {
+      color: #788bb3;
+      padding-left: 10px;
+      font-size: 1.4rem; }
+      .post-comments .comment .comment-content .comment-meta .meta-stats .stat-wrap .icon-star {
+        font-size: 1.4rem;
+        padding-right: 5px; }
+  .post-comments .comment .comment-content .comment-body {
+    margin-top: 5px; }
+    .post-comments .comment .comment-content .comment-body p {
+      font-size: 1.5rem;
+      line-height: 2.5rem; }
 
 /*# sourceMappingURL=main.css.map */

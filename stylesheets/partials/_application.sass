@@ -43,6 +43,7 @@
             padding: 15px
             position: relative
             .course-notifications
+                +shadow(0 0 3px darken($dark_highlight, 10%))
                 +roundedCorners
                 background: $highlight
                 color: $dark_highlight
@@ -125,11 +126,45 @@
                     &:hover
                         background: $border-light
                         cursor: pointer
+    .sub-header
+        @extend .clearfix
+        border-bottom: 1px solid $border_light
+        padding: 0 15px
+        position: relative
+        width: 100%
+        .sub-header-link
+            display: inline-block
+            color: darken($border-light, 30%)
+            font-size: 1.5rem
+            margin-right: 15px
+            line-height: 48px
+            height: 48px
+            &.active
+                border-bottom: 3px solid $dark_highlight
+                color: $dark_highlight
 
+// POSTS
 
+//layout
 
+.posts
+    .post
+        display: block
+        border-bottom: 1px solid $border-light
+        padding: 25px
+        .post-left
+            text-align: right
+            width: 50px
+        .post-content
+            width: calc(100% - 50px)
 
+//styling
 
+.post
+    .post-left
+        .avatar
+            +roundedCorners(25px)
+            width: 50px
 
 
 

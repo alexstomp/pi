@@ -14,7 +14,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.clearfix:after, .content .content-header:after {
+.clearfix:after, .content .content-header:after, .content .sub-header:after {
   content: "";
   display: table;
   clear: both; }
@@ -346,6 +346,9 @@ h1, h2, h3, h4, h5, h6 {
     padding: 15px;
     position: relative; }
     .sidebar .course-joins .course-join a .course-notifications {
+      box-shadow: 0 0 3px #584f89;
+      -moz-box-shadow: 0 0 3px #584f89;
+      -webkit-box-shadow: 0 0 3px #584f89;
       border-radius: 3px;
       -moz-border-radius: 3px;
       -webkit-border-radius: 3px;
@@ -444,5 +447,39 @@ h1, h2, h3, h4, h5, h6 {
         .content .content-header .header-right .header-search .icon-search:hover {
           background: #dadfea;
           cursor: pointer; }
+.content .sub-header {
+  border-bottom: 1px solid #dadfea;
+  padding: 0 15px;
+  position: relative;
+  width: 100%; }
+  .content .sub-header .sub-header-link {
+    display: inline-block;
+    color: #788bb3;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    line-height: 48px;
+    height: 48px; }
+    .content .sub-header .sub-header-link.active {
+      border-bottom: 3px solid #6F65A6;
+      color: #6F65A6; }
+
+.posts .post {
+  display: block;
+  border-bottom: 1px solid #dadfea;
+  padding: 25px; }
+  .posts .post .post-left {
+    text-align: right;
+    width: 50px; }
+  .posts .post .post-content {
+    width: calc(100% - 50px); }
+
+.post .post-left .avatar {
+  border-radius: 25px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  width: 50px; }
 
 /*# sourceMappingURL=main.css.map */

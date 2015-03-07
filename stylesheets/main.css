@@ -14,7 +14,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.clearfix:after, .content .content-header:after, .content .sub-header:after, .posts .post:after, .post .post-content .post-meta:after, .post-attachments:after, .post-comments .comment:after, .post-comments:after, .post-comments .comments .comment .comment-content .comment-meta:after, .post-comments .comments .comment .comment-content .comment-attachments:after {
+.clearfix:after, .content .content-header:after, .content .sub-header:after, .posts .post:after, .post .post-content .post-meta:after, .post .post-content .post-attachments:after, .post-comments .comment:after, .post-comments:after, .post-comments .comments .comment .comment-content .comment-meta:after, .post-comments .comments .comment .comment-content .comment-attachments:after {
   content: "";
   display: table;
   clear: both; }
@@ -466,6 +466,12 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 15px;
     line-height: 48px;
     height: 48px; }
+    .content .sub-header .sub-header-link .icon-posts, .content .sub-header .sub-header-link .icon-resources, .content .sub-header .sub-header-link .icon-star, .content .sub-header .sub-header-link .icon-members {
+      font-size: 1.7rem;
+      margin-right: 3px;
+      vertical-align: text-bottom; }
+    .content .sub-header .sub-header-link .icon-resources {
+      font-size: 1.6rem; }
     .content .sub-header .sub-header-link.active {
       border-bottom: 3px solid #6F65A6;
       color: #6F65A6; }
@@ -473,7 +479,7 @@ h1, h2, h3, h4, h5, h6 {
 .new-post {
   padding: 25px;
   padding-bottom: 0px;
-  max-width: 670px; }
+  max-width: 700px; }
   .new-post .avatar {
     border-radius: 4px;
     -moz-border-radius: 4px;
@@ -536,7 +542,7 @@ h1, h2, h3, h4, h5, h6 {
         cursor: pointer; }
 
 .posts {
-  max-width: 670px;
+  max-width: 700px;
   padding-bottom: 25px; }
   .posts .post {
     display: block;
@@ -596,66 +602,66 @@ h1, h2, h3, h4, h5, h6 {
   .post .post-content .post-body p {
     font-size: 1.5rem;
     line-height: 2.5rem; }
-
-.post-attachments {
+.post .post-content .post-attachments {
   border-left: 5px solid #dadfea;
   margin-top: 20px;
   padding-left: 25px; }
-  .post-attachments .file {
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    background-clip: padding-box;
-    -moz-background-clip: padding-box;
-    -webkit-background-clip: padding-box;
-    background: #eaedf3;
-    border: 1px solid #dadfea;
-    float: left;
-    height: 68px;
-    margin-right: 15px;
-    position: relative;
-    width: 250px; }
-    .post-attachments .file:last-child {
-      margin-right: 0; }
-    .post-attachments .file .file-icon {
-      position: absolute;
-      left: 10px;
-      bottom: 8px;
-      height: 50px; }
-    .post-attachments .file .file-name {
-      border-top: 1px solid #dadfea;
-      background: white;
-      bottom: 0;
-      color: #687da9;
-      left: 0;
-      padding: 0 10px 0 58px;
-      position: absolute;
-      height: 40px;
-      line-height: 38px;
-      font-size: 1.6rem;
-      font-weight: 600;
-      width: 100%; }
-    .post-attachments .file .file-meta {
-      color: #99a7c5;
-      position: absolute;
-      padding: 0 10px 0 58px;
-      left: 0;
-      bottom: 42px;
-      width: 100%; }
-      .post-attachments .file .file-meta .meta-downloads {
-        float: left;
-        font-size: 1.5rem; }
-        .post-attachments .file .file-meta .meta-downloads .icon-download {
-          font-size: 1.3rem; }
-      .post-attachments .file .file-meta .meta-size {
-        float: right;
-        font-size: 1.5rem; }
-    .post-attachments .file:hover {
-      background: #e4e7f0;
-      cursor: pointer; }
-      .post-attachments .file:hover .file-name {
-        background: #fbfbfc;
-        color: #5a6f9e; }
+
+.attachment {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background: #eaedf3;
+  border: 1px solid #dadfea;
+  float: left;
+  height: 68px;
+  margin-right: 15px;
+  position: relative;
+  width: 250px; }
+  .attachment:last-child {
+    margin-right: 0; }
+  .attachment .attachment-icon {
+    position: absolute;
+    left: 10px;
+    bottom: 8px;
+    height: 50px; }
+  .attachment .attachment-name {
+    border-top: 1px solid #dadfea;
+    background: white;
+    bottom: 0;
+    color: #687da9;
+    left: 0;
+    padding: 0 10px 0 58px;
+    position: absolute;
+    height: 40px;
+    line-height: 38px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 100%; }
+  .attachment .attachment-meta {
+    color: #99a7c5;
+    position: absolute;
+    padding: 0 10px 0 58px;
+    left: 0;
+    bottom: 42px;
+    width: 100%; }
+    .attachment .attachment-meta .attachment-meta-downloads {
+      float: left;
+      font-size: 1.5rem; }
+      .attachment .attachment-meta .attachment-meta-downloads .icon-download {
+        font-size: 1.3rem; }
+    .attachment .attachment-meta .attachment-meta-size {
+      float: right;
+      font-size: 1.5rem; }
+  .attachment:hover {
+    background: #e4e7f0;
+    cursor: pointer; }
+    .attachment:hover .attachment-file-name {
+      background: #fbfbfc;
+      color: #5a6f9e; }
 
 .post-comments .comment {
   position: relative; }

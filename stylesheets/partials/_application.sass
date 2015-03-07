@@ -163,11 +163,19 @@
             margin-right: 15px
             line-height: 48px
             height: 48px
+            .icon-posts, .icon-resources, .icon-star, .icon-members
+                font-size: 1.7rem
+                margin-right: 3px
+                vertical-align: text-bottom
+            .icon-resources
+                font-size: 1.6rem
             &.active
                 border-bottom: 3px solid $dark_highlight
                 color: $dark_highlight
 
-$content_width: 670px
+// TEMP VAR
+
+$content_width: 700px
 
 // NEW POST
 
@@ -287,64 +295,64 @@ $content_width: 670px
             p
                 font-size: 1.5rem
                 line-height: 2.5rem
+        .post-attachments
+            @extend .clearfix
+            border-left: 5px solid $border_light
+            margin-top: 20px
+            padding-left: 25px
 
 // ATTACHMENTS
 
-.post-attachments
-    @extend .clearfix
-    border-left: 5px solid $border_light
-    margin-top: 20px
-    padding-left: 25px
-    .file
-        +roundedCorners()
-        background: lighten($border_light, 5%)
-        border: 1px solid $border_light
-        float: left
-        height: 68px
-        margin-right: 15px
-        position: relative
-        width: 250px
-        &:last-child
-            margin-right: 0
-        .file-icon
-            position: absolute
-            left: 10px
-            bottom: 8px
-            height: 50px
-        .file-name
-            border-top: 1px solid $border_light
-            background: lighten($border_light, 12%)
-            bottom: 0
-            color: darken($border_light, 35%)
-            left: 0
-            padding: 0 10px 0 58px
-            position: absolute
-            height: 40px
-            line-height: 38px
-            font-size: 1.6rem
-            font-weight: 600
-            width: 100%
-        .file-meta
-            color: darken($border_light, 20%)
-            position: absolute
-            padding: 0 10px 0 58px
-            left: 0
-            bottom: 42px
-            width: 100%
-            .meta-downloads
-                float: left
-                font-size: 1.5rem
-                .icon-download
-                    font-size: 1.3rem
-            .meta-size
-                float: right
-                font-size: 1.5rem
-        &:hover
-            background: lighten($border_light, 3%)
-            cursor: pointer
-            .file-name
-                background: lighten($border-light, 10%)
-                color: darken($border_light, 40%)
+.attachment
+    +roundedCorners()
+    background: lighten($border_light, 5%)
+    border: 1px solid $border_light
+    float: left
+    height: 68px
+    margin-right: 15px
+    position: relative
+    width: 250px
+    &:last-child
+        margin-right: 0
+    .attachment-icon
+        position: absolute
+        left: 10px
+        bottom: 8px
+        height: 50px
+    .attachment-name
+        border-top: 1px solid $border_light
+        background: lighten($border_light, 12%)
+        bottom: 0
+        color: darken($border_light, 35%)
+        left: 0
+        padding: 0 10px 0 58px
+        position: absolute
+        height: 40px
+        line-height: 38px
+        font-size: 1.6rem
+        font-weight: 600
+        width: 100%
+    .attachment-meta
+        color: darken($border_light, 20%)
+        position: absolute
+        padding: 0 10px 0 58px
+        left: 0
+        bottom: 42px
+        width: 100%
+        .attachment-meta-downloads
+            float: left
+            font-size: 1.5rem
+            .icon-download
+                font-size: 1.3rem
+        .attachment-meta-size
+            float: right
+            font-size: 1.5rem
+    &:hover
+        background: lighten($border_light, 3%)
+        cursor: pointer
+        .attachment-file-name
+            background: lighten($border-light, 10%)
+            color: darken($border_light, 40%)
 
 // COMMENTS
 
@@ -457,8 +465,6 @@ $content_width: 670px
                             .file-name
                                 background: lighten($border-light, 10%)
                                 color: darken($border_light, 40%)
-
-
 
 // NEW COMMENT
 
